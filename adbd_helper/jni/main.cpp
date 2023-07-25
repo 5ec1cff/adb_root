@@ -10,7 +10,7 @@ int main(int argc, char** argv) {
     // u:r:adbd:s0 is restricted
     char* const new_argv[] = { 
         argv[0],
-        const_cast<char*>("--root_seclabel=u:r:magisk:s0")
+        const_cast<char*>("--root_seclabel=u:r:su:s0")
     };
 
     return execve(real_adbd, new_argv, envp);
